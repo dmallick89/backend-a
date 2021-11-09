@@ -28,3 +28,10 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script for backend-a application
         run: echo Hello, world to backend-a... !
+        
+     - name: Trigger backend-b application action yaml   
+       uses: convictional/trigger-workflow-and-wait@v1.3.0
+       with:
+        owner: dmallick89
+        repo: backend-b
+        workflow_file_name: backend.yml
