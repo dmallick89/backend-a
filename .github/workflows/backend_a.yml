@@ -1,0 +1,22 @@
+name: Deploy
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Run backend-a application
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build Web App
+        run: 
+          echo "Build backend a application"
+    
+      - uses: convictional/trigger-workflow-and-wait@v1.3.0
+        with:
+          owner: dmallick89
+          repo: backend-b
+          workflow_file_name: backend.yml
+          run: 
+           echo "Trigered backend-b application..."
+      
