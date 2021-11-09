@@ -1,8 +1,8 @@
-name: Deploy
+name: Trigger backend-b workflow from backend-a workflow
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   build:
     name: Run backend-a application
