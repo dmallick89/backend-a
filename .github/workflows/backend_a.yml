@@ -9,8 +9,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build backend-a application
-        run: 
+        run: |
           echo "Build backend a application"
+          sleep 10s
     
       - uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
@@ -19,7 +20,7 @@ jobs:
           github_token: ${{secrets.PERSONAL_ACCESS_TOKEN}}
           workflow_file_name: backend.yml
           inputs: '{}'
-          propagate_failure: false
+          propagate_failure: true
           trigger_workflow: true
           wait_workflow: true
           
