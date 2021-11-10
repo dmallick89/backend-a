@@ -9,9 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Build backend-a application
-        run: |
-          echo "Should not run this one as backend-b failed"
-          echo "Build backend a application"
+        run: echo "Build backend a application"
     
       - uses: convictional/trigger-workflow-and-wait@v1.3.0
         with:
