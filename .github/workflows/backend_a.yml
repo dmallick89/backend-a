@@ -16,6 +16,7 @@ jobs:
         with:
           owner: dmallick89
           repo: backend-b
+          github_token: ${{secrets.PERSONAL_ACCESS_TOKEN}}
           workflow_file_name: backend.yml
           run: 
            echo "Trigered backend-b application..."
