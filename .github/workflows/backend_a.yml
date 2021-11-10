@@ -10,6 +10,7 @@ jobs:
     steps:
       - name: Build backend-a application
         run: |
+          echo "Should not run this one as backend-b failed"
           echo "Build backend a application"
           sleep 10s
     
