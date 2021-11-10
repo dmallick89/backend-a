@@ -20,11 +20,4 @@ jobs:
           repo: backend-b
           github_token: ${{secrets.PERSONAL_ACCESS_TOKEN}}
           workflow_file_name: backend.yml
-          inputs: '{}'
-          propagate_failure: true
-          trigger_workflow: true
-          wait_workflow: true
-          
-      - name: Deploy backend-a application
-        run: echo "Deploying backend-a application for demo purpose"
       
