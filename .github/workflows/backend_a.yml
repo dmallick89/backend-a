@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+  repository_dispatch:
 jobs:
   build:
     name: Run backend-a application
@@ -10,11 +11,4 @@ jobs:
     steps:
       - name: Build backend-a application
         run: echo "Build backend a application"
-    
-      - uses: convictional/trigger-workflow-and-wait@v1.3.0
-        with:
-          owner: dmallick89
-          repo: backend-b
-          github_token: ${{secrets.PERSONAL_ACCESS_TOKEN}}
-          workflow_file_name: backend.yml
       
